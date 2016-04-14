@@ -16,6 +16,10 @@ class TestAlgos(unittest.TestCase):
         self.assertEquals(self.count_li(x), 10000)
         self.assertEquals(self.count_li(y), 100)
         self.assertEquals(self.count_li(z), 666)
+        instances = [x, y, z]
+        for inst in instances:
+            for i in inst:
+                self.assertTrue(type(i) is int)
 
 if __name__ == '__main__':
     unittest.main()
