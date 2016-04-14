@@ -24,5 +24,10 @@ class A(object):
                     u_list[i], u_list[i+1] = u_list[i+1], u_list[i]
 
     def merge_sort(self, u_list):
-        pass
+        length = len(u_list)
+        if length > 1:
+            left = u_list[:(length/2)]
+            right = u_list[(length/2):]
+            self.merge_sort(left)
+            self.merge_sort(right)
 
