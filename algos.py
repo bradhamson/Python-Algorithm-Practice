@@ -13,5 +13,13 @@ class A(object):
         r = [int(random()*1000) for i in xrange(list_len)]
         return r
 
-    def bubble_sort(self):
-        pass
+    def bubble_sort(self, u_list):
+        length = len(u_list) - 1
+        sort = False
+        while not sort:
+            sort = True
+            for i in xrange(length):
+                if u_list[i] > u_list[i+1]:
+                    sort = True
+                    u_list[i], u_list[i+1] = u_list[i+1], u_list[i]
+
