@@ -3,11 +3,6 @@ from algos import A
 
 class TestAlgos(unittest.TestCase):
 
-    def __init__(self):
-        self.test1 = A()
-        self.test2 = A()
-        self.test3 = A()
-
     def count_li(self, r_list):
         count = 0
         for i in r_list:
@@ -15,10 +10,9 @@ class TestAlgos(unittest.TestCase):
         return count
 
     def test_random_list(self):
-        x = self.test1._random_list(10000)
-        y = self.test2._random_list(100)
-        z = self.test3._random_list(666)
-
+        x = A()._random_list(10000)
+        y = A()._random_list(100)
+        z = A()._random_list(666)
         self.assertEquals(self.count_li(x), 10000)
         self.assertEquals(self.count_li(y), 100)
         self.assertEquals(self.count_li(z), 666)
