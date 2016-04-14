@@ -10,15 +10,12 @@ class TestAlgos(unittest.TestCase):
         return count
 
     def test_random_list(self):
-        x = A()._random_list(10000)
-        y = A()._random_list(100)
-        z = A()._random_list(666)
-        self.assertEquals(self.count_li(x), 10000)
-        self.assertEquals(self.count_li(y), 100)
-        self.assertEquals(self.count_li(z), 666)
-        instances = [x, y, z]
-        for inst in instances:
-            for i in inst:
+        x = A()
+        list_lengths = [10000, 100, 666]
+        for list_length in list_lengths:
+            test_list = x._random_list(list_length)
+            self.assertEquals(self.count_li(test_list), list_length)
+            for i in test_list:
                 self.assertTrue(type(i) is int)
 
 if __name__ == '__main__':
