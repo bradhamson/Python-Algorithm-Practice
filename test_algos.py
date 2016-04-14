@@ -13,14 +13,14 @@ class TestAlgos(unittest.TestCase):
         x = A()
         list_lengths = [10000, 100, 666]
         for list_length in list_lengths:
-            test_list = x._random_list(list_length)
+            test_list = x.random_list(list_length)
             self.assertEquals(self.count_li(test_list), list_length)
             for i in test_list:
                 self.assertTrue(type(i) is int)
 
     def test_bubble_sort(self):
         x = A()
-        test_list = x._random_list(100)
+        test_list = x.random_list(100)
         x.bubble_sort(test_list)
         length = len(test_list)
         for i in xrange(length-1):
