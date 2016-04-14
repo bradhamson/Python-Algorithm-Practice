@@ -20,6 +20,6 @@ class A(object):
             sort = True
             for i in xrange(length):
                 if u_list[i] > u_list[i+1]:
-                    sort = True
+                    sort = False
                     u_list[i], u_list[i+1] = u_list[i+1], u_list[i]
 
