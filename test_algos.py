@@ -18,5 +18,13 @@ class TestAlgos(unittest.TestCase):
             for i in test_list:
                 self.assertTrue(type(i) is int)
 
+    def test_bubble_sort(self):
+        x = A()
+        test_list = x._random_list(100)
+        x.bubble_sort(test_list)
+        length = len(test_list)
+        for i in xrange(length-1):
+            self.assertTrue(test_list[i] <= test_list[i+1])
+
 if __name__ == '__main__':
     unittest.main()

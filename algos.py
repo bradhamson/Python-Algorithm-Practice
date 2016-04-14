@@ -23,3 +23,6 @@ class A(object):
                     sort = False
                     u_list[i], u_list[i+1] = u_list[i+1], u_list[i]
 
+    def merge_sort(self, u_list):
+        pass
+
